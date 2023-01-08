@@ -1,0 +1,6 @@
+CRITICAL - 2023-01-08 10:12:51 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 /Applications/MAMP/htdocs/tiketkapal/system/CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 /Applications/MAMP/htdocs/tiketkapal/system/CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 /Applications/MAMP/htdocs/tiketkapal/system/bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 /Applications/MAMP/htdocs/tiketkapal/spark(45): require('/Applications/M...')
+#4 {main}
