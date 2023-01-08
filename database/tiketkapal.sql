@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 25, 2022 at 01:25 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.4.20
+-- Host: localhost:8889
+-- Generation Time: Jan 08, 2023 at 10:40 AM
+-- Server version: 5.7.34
+-- PHP Version: 7.4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,9 +39,9 @@ CREATE TABLE `kapal` (
 --
 
 INSERT INTO `kapal` (`id_kapal`, `gambar`, `nm_kapal`, `deskripsi`) VALUES
-(3, '1658713866_528809999f036c5cf15e.png', 'Kapal Kongkang', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, dolores tenetur nam quae voluptas dolorem impedit exercitationem doloremque odit enim, sunt laborum minus rerum, amet odio ab blanditiis accusantium repellendus!'),
-(4, '1658713831_5b5c2f00aa522cb16562.png', 'Kapal Ferry', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, dolores tenetur nam quae voluptas dolorem impedit exercitationem doloremque odit enim, sunt laborum minus rerum, amet odio ab blanditiis accusantium repellendus!'),
-(5, '1658714319_85b62c329b5257a478d0.png', 'Kapal Selam', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, dolores tenetur nam quae voluptas dolorem impedit exercitationem doloremque odit enim, sunt laborum minus rerum, amet odio ab blanditiis accusantium repellendus!');
+(6, '1670928739_db949e2b9c86fae2534a.jpeg', 'Kapal Marina', 'Waisai adalah ibu kota Kabupaten Raja Ampat yang berada di bagian selatan Pulau Waigeo, yang dibangun pada tahun 2003 seiring dengan pemekaran Raja Ampat menjadi kabupaten. Waisai merupakan rumah bagi sekitar 10.000 penduduk, yang beberapa tahun belakangan ini berkembang menjadi titik transit bagi wisatawan. Dapat diakses dengan kapal cepat dari Kota Sorong, Waisai adalah kota kecil yang masih berkembang dengan penduduk setempat yang ramah.'),
+(7, '1670928767_a1648158f3222635e100.jpeg', 'Kapal Marina', 'Waisai adalah ibu kota Kabupaten Raja Ampat yang berada di bagian selatan Pulau Waigeo, yang dibangun pada tahun 2003 seiring dengan pemekaran Raja Ampat menjadi kabupaten. Waisai merupakan rumah bagi sekitar 10.000 penduduk, yang beberapa tahun belakangan ini berkembang menjadi titik transit bagi wisatawan. Dapat diakses dengan kapal cepat dari Kota Sorong, Waisai adalah kota kecil yang masih berkembang dengan penduduk setempat yang ramah.'),
+(8, '1670928798_72d7416aef91697fe8df.jpeg', 'Kapal Marina II', 'Waisai adalah ibu kota Kabupaten Raja Ampat yang berada di bagian selatan Pulau Waigeo, yang dibangun pada tahun 2003 seiring dengan pemekaran Raja Ampat menjadi kabupaten. Waisai merupakan rumah bagi sekitar 10.000 penduduk, yang beberapa tahun belakangan ini berkembang menjadi titik transit bagi wisatawan. Dapat diakses dengan kapal cepat dari Kota Sorong, Waisai adalah kota kecil yang masih berkembang dengan penduduk setempat yang ramah.');
 
 -- --------------------------------------------------------
 
@@ -64,9 +64,8 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id_pengguna`, `nm_pengguna`, `email`, `jk`, `nohp`, `password`, `level`) VALUES
-(1, 'Haikal Wahyudi', 'admin@gmail.com', 'Laki-Laki', '23423', '1234', 'Admin'),
-(2, 'Udang', 'udang@gmail.com', 'Laki-Laki', '123456765432', '1234', 'Pengguna'),
-(3, 'mutia', 'mutia@gmail.com', 'Perempuan', '1456', '1234', 'Pengguna');
+(1, 'Admin', 'admin@gmail.com', 'Laki-Laki', '23423', 'admin', 'Admin'),
+(4, 'wandy', 'suwandiaminsangaji@gmail.com', 'Laki-Laki', '082256330920', 'wandy123', 'Pengguna');
 
 -- --------------------------------------------------------
 
@@ -99,10 +98,8 @@ CREATE TABLE `pesantiket` (
 --
 
 INSERT INTO `pesantiket` (`id_pemesanan`, `nm_pemesan`, `id_pengguna`, `jk`, `tempat_lahir`, `tgl_lahir`, `tgl_pemesanan`, `nik`, `nohp`, `alamat`, `dewasa`, `bayi`, `jeniskendaraan`, `id_pembayaran`, `gambar`, `aksi`, `total_pembayaran`) VALUES
-(3, 'Haikal Wahyudi', 2, 'Laki-Laki', 'Penakak', '2002-02-01', '2022-07-13', '6464', '6546', 'fgh', 2, 1, 'Golongan VII', 4, 'default.png', 1, '1759903'),
-(4, 'Mutia Rahmi', 2, 'Perempuan', 'Penakak', '2022-06-29', '2022-07-04', '1862381', '212131', 'slkhdjs', 2, 2, 'Golongan IVa', 5, '1658670558_8c028075771b3c099ef2.png', 2, '547155'),
-(5, 'Mutia Rahmi', 3, 'Perempuan', 'dfgd', '2022-07-06', '2022-07-04', '3454', '3454', 'erter', 2, 0, 'Golongan VII', 3, '1658664995_2839d1707708e5f2d6d7.jpg', 3, '1754703'),
-(6, 'aaa', 2, 'Perempuan', 'aa', '2022-07-06', '2024-07-22', '222', '222', 'sdsf', 2, 0, 'Golongan VIb', 7, 'default.png', 1, '1090738');
+(7, 'Wandy', 4, 'Laki-Laki', 'Sorong', '1987-01-13', '2022-12-13', '7304090404940003', '082256330920', 'Sorong', 2, 0, 'Golongan I', 5, '1670928452_2f58f212b8e39a5606ee.jpg', 3, '36000'),
+(8, 'Ratih', 4, 'Perempuan', 'Sorong', '2023-01-01', '2023-01-08', '7304090404940002', '082256330920', 'ahsbhasdb', 1, 0, '-Pilih Jenis Kendara', 5, '1673174126_f8b73eb9bf0a3ee149e7.png', 3, '125000');
 
 -- --------------------------------------------------------
 
@@ -127,8 +124,7 @@ INSERT INTO `rekening` (`id_pembayaran`, `bank`, `norek`) VALUES
 (4, 'NTB', '4365'),
 (5, 'MANDIRI', '8687'),
 (6, 'OVO', '983'),
-(7, 'DANA', '983'),
-(8, 'LINKAJA', '7834');
+(7, 'DANA', '983');
 
 --
 -- Indexes for dumped tables
@@ -166,25 +162,25 @@ ALTER TABLE `rekening`
 -- AUTO_INCREMENT for table `kapal`
 --
 ALTER TABLE `kapal`
-  MODIFY `id_kapal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_kapal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pesantiket`
 --
 ALTER TABLE `pesantiket`
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `rekening`
 --
 ALTER TABLE `rekening`
-  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
